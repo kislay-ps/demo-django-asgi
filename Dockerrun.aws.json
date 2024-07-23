@@ -1,9 +1,9 @@
 {
-    "AWSEBDockerrunVersion": 1,
+    "AWSEBDockerrunVersion": "1",
     "Image": {
-      "Name": "kislayps/demo-django",
+      "Name": "your-dockerhub-image-name:version", 
       "Update": "true"
-    },
+    }, 
     "Ports": [
       {
         "ContainerPort": 8888

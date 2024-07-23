@@ -15,8 +15,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the project code into the container
 COPY . /app/
 
-# Expose port 8888 for Django development server
+# Expose port 8888 for Django development server will override [docker run -p 8080:8080]
 EXPOSE 8888
 
 # Run the Django development server
+RUN ["python", "manage.py", "migrate"]
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8888"]
